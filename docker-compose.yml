@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  web:
+    build: ./api
+    image: agecalc
+    ports:
+      - "81:5000"
+    command:
+      - python
+      - app.py
+
+  db:
+    image: mysql
+    ports:
+      - "3306:32048"
+    environment:
+      PASSWORD: NNYp9XM4zkDnZvn5
+      USER: root
